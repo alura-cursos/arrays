@@ -1,11 +1,18 @@
 <?php
 
-require "Calculadora.php";
+$saldos = [
+    2500,
+    3000,
+    4400,
+    1000,
+    8700,
+    9000
+];
 
-$notas = [9, 5, 10, 2];
+foreach ($saldos as $saldo) {
+    echo "<p>$saldo</p>";
+}
 
-$calculadora = new Calculadora();
+sort($saldos);
 
-$media = $calculadora->calculaMedia($notas);
-
-echo "MÉDIA: $media";
+echo "O menor saldo é: $saldos[0]";
